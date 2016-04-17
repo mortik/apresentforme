@@ -1,0 +1,6 @@
+<h2>Edit wishlist</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: wishlist_path(@conn, :update, @wishlist) %>
+
+<%= link "Back", to: wishlist_path(@conn, :index) %>

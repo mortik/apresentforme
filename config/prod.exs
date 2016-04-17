@@ -13,6 +13,7 @@ config :logger, level: :info
 # Configure your database
 config :app, App.Repo,
   adapter: Ecto.Adapters.Postgres,
+  database: "apresentforme",
   url: System.get_env("DATABASE_URL"),
   pool_size: 20,
   ssl: true

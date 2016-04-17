@@ -1,0 +1,13 @@
+<h2>Show wishlist</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @wishlist.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: wishlist_path(@conn, :edit, @wishlist) %>
+<%= link "Back", to: wishlist_path(@conn, :index) %>

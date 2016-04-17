@@ -1,0 +1,6 @@
+<h2>New wishlist</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: wishlist_path(@conn, :create) %>
+
+<%= link "Back", to: wishlist_path(@conn, :index) %>

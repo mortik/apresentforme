@@ -1,0 +1,26 @@
+<h2>Listing wishlists</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for wishlist <- @wishlists do %>
+    <tr>
+      <td><%= wishlist.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: wishlist_path(@conn, :show, wishlist), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: wishlist_path(@conn, :edit, wishlist), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: wishlist_path(@conn, :delete, wishlist), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New wishlist", to: wishlist_path(@conn, :new) %>

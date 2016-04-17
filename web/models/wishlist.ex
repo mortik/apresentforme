@@ -1,6 +1,8 @@
 defmodule App.Wishlist do
   use App.Web, :model
 
+  @primary_key {:id, :binary_id, autogenerate: true}
+
   schema "wishlists" do
     field :name, :string
 

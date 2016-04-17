@@ -5,6 +5,10 @@ defmodule App.ErrorView do
     "Page not found"
   end
 
+  def render("400.html", _assigns) do
+    "Bad request"
+  end
+
   def render("500.html", _assigns) do
     "Server internal error"
   end
